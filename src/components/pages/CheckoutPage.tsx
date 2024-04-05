@@ -49,7 +49,7 @@ export default function CheckoutPage() {
   async function onsubmitFn(e:any){
     e.preventDefault();
     setLoading(true)
-    router.push(`https://test.payken.io/invoice/merchant_id=ad4a261048&merchant_secret=61d8368c78d98a4354c8d372?total=${q_cart?.data?.total}&type=purchase&display_name=${q_cart?.data?.venue?.name}&user_id=${userInfo?.email}&order_id=${q_cart?.data?.id}`)
+    router.push(`https://test.payken.io/invoice/merchant_id=ad4a261048&merchant_secret=61d8368c78d98a4354c8d372?total=${q_cart?.data?.total}&type=purchase&display_name=order-${q_cart?.data?.id}&user_id=${userInfo?.email}&order_id=${q_cart?.data?.id}`)
   }
 
   return (

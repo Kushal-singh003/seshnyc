@@ -1,10 +1,8 @@
 'use client'
 
-import { useRouter,useSearchParams } from 'next/navigation'
 import React from 'react'
 
 export default function success() {
-    const router = useRouter()
   
     return (
         <div style={{marginTop: '5%'}}>

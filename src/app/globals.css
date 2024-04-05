@@ -1,0 +1,465 @@
+:root {
+  --brand-primary: #52c0c7;
+  --brand-secondary: #58cb6e;
+
+  /* Colors */
+  --bg-color: #f7f3e0;
+  --text-color: var(--blue-dark);
+  --border-color: #c2bc9c;
+  --brand-danger: #ef4d61;
+  --brand-danger-lightest: #fbe9ec;
+  --brand-warning: #ffc12e;
+  --brand-warning-lightest: #fbf5e8;
+  --brand-info: var(--brand-primary);
+  --brand-info-lightest: #e9f5fc;
+  --brand-success: var(--brand-primary);
+  --brand-success-lightest: #e9f6f2;
+  --blue: var(--brand-primary);
+  --blue-dark: #076b72;
+  --green: var(--brand-success);
+  --green-dark: #007a4b;
+  --orange: #ee870f;
+  --yellow: var(--brand-warning);
+  --yellow-darker: #c4921c;
+  --pink: #eb4892;
+  --purple: #6c43ff;
+  --brown: #6c3628;
+  /* Grays + Blacks */
+  --gray-lightest: #fafbfc;
+  --gray-light: #e2e6ed;
+  --gray: #787c84;
+  --white: #ffffff;
+  --black: #181818;
+  /* Shared Components */
+  --border-radius-base: 4px;
+  --card-border-color: #e2e6ed;
+  --dropdown-backdrop: rgba(0, 0, 0, 0.3);
+  --box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Brown",sans-serif;
+  background: #fafbfc;
+  min-height: 100vh;
+  -webkit-text-size-adjust: 100%;
+  line-height: normal;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: var(--text-color);
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.checkout-form {
+  width: 50%;
+}
+
+.checkout-form  h6 {
+  font-size: 1rem;
+  color: black;
+  font-weight: 700;
+}
+
+.checkout-form  .form-control {
+  margin: 10px 0;
+  position: relative;
+  border: 1px solid #e2e6ed;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: white;
+  width: 100%;
+}
+
+.checkout-form  .form-control label:not([for="checkout-checkbox"]) {
+  display: block;
+  font-size: 10px;
+  font-weight: 300;
+  margin-bottom: 2px;
+  color: #787c84;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.checkout-form  .form-control input:not([type="checkbox"]) {
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  height: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.checkout-form  .form-control input:not([type="checkbox"])::placeholder {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.checkout-form  .form-control label[for="checkout-checkbox"] {
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 10px;
+}
+
+.checkout-form  .form-control > div {
+  position: relative;
+}
+
+.checkout-form  .form-control > div span.fa {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(15px, -50%);
+}
+
+.checkout-header{
+  text-align: center;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.checkout-form  .form-group {
+  display: flex;
+  column-gap: 25px;
+}
+
+.checkout-form  .checkbox-control {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.checkout-form  .form-control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.checkout-form  .form-control-btn button {
+  padding: 10px 25px;
+  font-size: 10px;
+  color: #fff;
+  background: #f2994a;
+  border: 0;
+  border-radius: 7px;
+  letter-spacing: .5px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.checkout-details {
+  width: 40%;
+}
+
+.checkout-details .checkout-details-inner {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card{
+  display: flex;  
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.card-details .card-price{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+
+
+}
+
+.card img {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+.form-control-btn button{
+  width: 100%;
+  background: #57cb6d;
+  border: none;
+  padding: 16px;
+  margin: 20px 0;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.checkout-details .checkout-details-inner .checkout-lists {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-bottom: 40px;
+}
+
+.checkout-details .checkout-details-inner .checkout-lists .card {
+  width: 100%;
+  display: flex;
+  column-gap: 15px;
+}
+
+
+.checkout-details .checkout-details-inner .checkout-lists .card .card-details {
+  display: flex;
+}
+
+.checkout-details .checkout-details-inner .checkout-lists .card .card-details .card-name {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.checkout-details .checkout-details-inner .checkout-lists .card .card-details .card-price {
+  font-size: 10px;
+  font-weight: 500;
+  color: #f2994a;
+  margin-top: 5px;
+}
+
+.promo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.promo input{
+  width: 100%;
+  border: 1px solid #e2e6ed;
+  border-radius: 5px;
+  padding: 14px;
+}
+
+.promo button{
+  padding: 8px 20px;
+  border-radius: 30px;
+  border: 1px solid #e2e6ed;
+  background: none;
+  font-weight: 700;
+
+}
+
+
+.success-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #7a9;
+}
+
+.container {
+  background-color: white;
+  height: 440px;
+  width: 275px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px 10px rgba(#000, 0.05);
+}
+
+
+.circle,
+.circle-border {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.circle {
+  z-index: 1;
+  position: relative;
+  background: white;
+  transform: scale(1);
+  animation: success-anim 700ms ease;
+}
+.circle-border {
+  z-index: 0;
+  position: absolute;
+  background: #8f6;
+  transform: scale(1.1);
+  animation: circle-anim 400ms ease;
+}
+
+@keyframes success-anim {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-anim {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.success::before,
+.success::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: #7a9;
+  position: absolute;
+}
+
+.success::before {
+  width: 17px;
+  top: 58%;
+  left: 23%;
+  transform: rotateZ(50deg);
+}
+
+.success::after {
+  width: 30px;
+  top: 50%;
+  left: 35%;
+  transform: rotateZ(-50deg);
+}
+
+
+.checkbox {
+  margin-top: 20px;
+  font-size: 12px;
+  justify-content: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  color: gray;
+}
+
+.checkout-details .checkout-details-inner .checkout-lists .card .card-details .card-price span {
+  color: #4e5150;
+  margin-left: 10px;
+}
+
+.checkout-details .checkout-details-inner .checkout-lists .card .card-details .card-wheel {
+  margin-top: 17px;
+  border: .2px solid #4e515085;
+  width: 90px;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-details .checkout-details-inner .checkout-lists .card .card-details .card-wheel button {
+  background: #e0e0e0;
+  color: #828282;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.checkout-details .checkout-details-inner .checkout-shipping,
+.checkout-details .checkout-details-inner .checkout-total {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 5px 0;
+  justify-content: space-between;
+}
+
+.checkout-details .checkout-details-inner .checkout-shipping p,
+.checkout-details .checkout-details-inner .checkout-total p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+main.checkout-main {
+  display: flex;
+  flex-flow: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+.radio-check {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+  .checkout-form {
+      width: 100%;
+      margin-top: 35px;
+  }
+
+  .checkout-details {
+      width: 100%;
+  }
+
+  footer {
+      height: 10%;
+  }
+}
+
+
+

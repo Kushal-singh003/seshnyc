@@ -24,6 +24,8 @@ export type Cart = {
   subtotalWithoutDiscounts?: number
   subtotal?: number
   checkoutUrl: string
+  total?:string
+  tax?:string
 }
 
 export type CartWithItemProducts = Omit<Cart, 'items'> & {
@@ -74,6 +76,7 @@ export type CartItem = {
   size?: string
   weightFormatted?: string
   discountTotal?: number
+  image?:string
 }
 
 export type CartItemCreateData = {
